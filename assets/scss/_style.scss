@@ -141,7 +141,7 @@ body{
 
 .bandeau{
     background: #21201E;
-    height: 40vh;
+    height: 45vh;
 }
 
 #section2{
@@ -150,7 +150,7 @@ body{
     text-align: center;
 
     .menu{
-        transform: translateY(-350px);
+        // transform: translateY(-350px);
     
         h2{
             font-family: allura;
@@ -170,6 +170,7 @@ body{
 
             li{
             padding: 0 2em;
+            text-transform: capitalize;
 
             &:after{
                 content: "";
@@ -185,19 +186,26 @@ body{
         &_content{
             width: 60%;
             margin: auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            padding: 30px 50px;
             background: $white;
             border-top: 7px solid $or;
             color: $black;
+            
+            section{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 100px;
+            }
 
             .plate{
                 display: grid;
-                grid-template-columns: 20% 50% 10%;
+                grid-template-columns: 1fr 6fr 2fr;
+                align-items: center;
+                padding: 3em 2em;
+                border-bottom: 1px dashed $grey;
 
                 img{
-                    $dim: 80px;
+                    $dim: 60px;
                     width: $dim;
                     height: $dim;
                     border-radius: 50%;
@@ -207,7 +215,6 @@ body{
                 &_descriptif{
                     text-align: left;
                     
-                    
                     h2{
                         font-family: poppins;
                         color: inherit;
@@ -215,9 +222,9 @@ body{
                         font-size: 1rem;
                     }
                     p{
-                        font-size: 0.8rem;
-                        text-transform: uppercase;
-                        margin-right: 50px;
+                        font-size: 1rem;
+                        text-transform: capitalize;
+                        margin: 0
                     }
                 }
 
@@ -227,7 +234,10 @@ body{
                     align-items: center;
                     color: $or;
                     font-family: allura;
-                    font-size: 1rem ;
+
+                    h2{
+                        font-size: 2rem;
+                    }
                 }
             }
         }

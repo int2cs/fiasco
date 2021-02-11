@@ -21,6 +21,10 @@ body {
   font-family: poppins;
 }
 
+h2 {
+  text-transform: capitalize;
+}
+
 body {
   margin: 0;
   box-sizing: border-box;
@@ -169,17 +173,13 @@ body {
 
 .bandeau {
   background: #21201E;
-  height: 40vh;
+  height: 45vh;
 }
 
 #section2 {
   margin: 0;
   background: center/cover url("../assets/img/bg-menu-01.jpg");
   text-align: center;
-}
-
-#section2 .menu {
-  transform: translateY(-350px);
 }
 
 #section2 .menu h2 {
@@ -203,6 +203,7 @@ body {
 
 #section2 .menu ul li {
   padding: 0 2em;
+  text-transform: capitalize;
 }
 
 #section2 .menu ul li:after {
@@ -217,22 +218,29 @@ body {
 #section2 .menu_content {
   width: 60%;
   margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  padding: 30px 50px;
   background: #fff;
   border-top: 7px solid #bb9519;
   color: #000;
 }
 
+#section2 .menu_content section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+
 #section2 .menu_content .plate {
   display: grid;
-  grid-template-columns: 20% 50% 10%;
+  grid-template-columns: 1fr 6fr 2fr;
+  align-items: center;
+  padding: 3em 2em;
+  border-bottom: 1px dashed #aaa;
 }
 
 #section2 .menu_content .plate img {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   margin-right: 20px;
 }
@@ -249,9 +257,9 @@ body {
 }
 
 #section2 .menu_content .plate_descriptif p {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  margin-right: 50px;
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin: 0;
 }
 
 #section2 .menu_content .plate .price {
@@ -260,6 +268,9 @@ body {
   align-items: center;
   color: #bb9519;
   font-family: allura;
-  font-size: 1rem;
+}
+
+#section2 .menu_content .plate .price h2 {
+  font-size: 2rem;
 }
 /*# sourceMappingURL=app.css.map */
