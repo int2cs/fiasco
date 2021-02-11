@@ -1,8 +1,36 @@
+*{
+    scroll-behavior: smooth;
+}
+
 body{
     font-size: 16px;
     font-family: poppins;
 }
+h1,h2,h3,h4{
+    margin: 0;
+    line-height: 1em;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+
+    &:hover{
+        display: inline-block;
+        transform: scale(1.5);
+    }
+}
 
 h2{
     text-transform: capitalize;
+}
+img.couvert{
+    margin: 3rem;
+}
+input, select{
+    outline: none;
+    border: none;
+    border-bottom: 2px solid $grey;
+    padding: 1em
 }

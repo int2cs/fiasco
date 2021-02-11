@@ -10,15 +10,31 @@ html(lang="fr")
     body 
         #head 
             nav
-                h2 The Fiasco
+                h2 
+                    a(href="#")
+                        |The Fiasco
                 ul  
-                    li home
-                    li reservations
-                    li menu
-                    li blog
-                    li pages
-                    li shop
-                    li contact
+                    li 
+                        a(href="#")
+                            |home
+                    li 
+                        a(href="#")
+                            |reservations
+                    li 
+                        a(href="#section2")
+                            |menu
+                    li 
+                        a(href="#")
+                            |blog
+                    li 
+                        a(href="#")
+                            |pages
+                    li 
+                        a(href="#")
+                            |shop
+                    li 
+                        a(href="#")
+                            |contact
                 .reseaux 
                 ul 
                     li 
@@ -46,12 +62,11 @@ html(lang="fr")
                     .card
                         img(src="assets/img/avatar-01.jpg", alt="avatar chef cuisto")
                         h2 russell stephens
-                        h3 chef cook
+                        h3 chef cook 
+                        //TODO espacer el h3 et le h2
 
 
             .bloc
-
-        section.bandeau 
 
         section#section2 
             .menu 
@@ -126,7 +141,47 @@ html(lang="fr")
                             .price 
                                 h2 $25
                     
+        section#section3 
+            .reservation 
+                .bloc 
+                    .bloc_content 
+                        h2 time 
+                        h3 open 
+                        img.couvert(src="assets/img/ic-plate.png" alt="logo couvert")
+                        h4 monday - friday 
+                        p 7am - 11am
+                            em
+                                | (breakfast)
+                        p 11 - am 10pm
+                            em
+                                | (lunch/dinner)
+                        h4 saturday / sunday 
+                        p 8am - 1pm|
+                            em  
+                                | (brunch)
+                        p 1pm - 9pm
+                            em 
+                                | (lunch/dinner)
+                        h4 +15 890 979 25 52
+                .bloc 
+                    h2 reservation 
+                    h3 online booking 
+                    img.couvert(src="assets/img/ic-plate.png" alt="logo couvert")
+                    form(action="#") 
+                        div
+                            select(id="people" required)
+                                option People
+                                - var i = 0
+                                while i < 10
+                                    option(value=i)= i++
+                            input(type="date" id="date" value="2021-02-11" min="2021-01-01" max="2021-12-31" required)
+                            input(type="time" id="time" min="07:00" max="19:30" required)
+                        div
+                            input(type="text" placeholder="Name" required)
+                            input(type="text" placeholder="Phone" required)
+                            input(type="text" placeholder="Email" required)
+                        button(type="submit") book now
 
-
-                    
+        section#section4{
             
+        }
