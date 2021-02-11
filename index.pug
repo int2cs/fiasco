@@ -1,3 +1,7 @@
+//déclaration
+mixin couvert
+    img.couvert(src="assets/img/ic-plate.png" alt="logo couvert")
+
 doctype html
 html(lang="fr")
     head
@@ -48,7 +52,7 @@ html(lang="fr")
                 .vh_content_txt
                     h2 Welcome to 
                     h1 the resto 
-                    img.couvert(src="assets/img/ic-plate.png" alt="logo couvert")
+                    +couvert
                     h3 we serve only the freshest ingredients !
 
         section#section1   
@@ -56,14 +60,14 @@ html(lang="fr")
                 .bloc_content
                     h2 Discover 
                     h3 our store
-                    img.couvert(src="assets/img/ic-plate.png" alt="logo couvert")
+                    +couvert
                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nesciunt voluptate quos inventore fugit aliquam deleniti hic ad ipsum qui, vero, iusto doloribus. Dolor, quisquam.
                     
                     .card
                         img(src="assets/img/avatar-01.jpg", alt="avatar chef cuisto")
                         h2 russell stephens
                         h3 chef cook 
-                        //TODO espacer el h3 et le h2
+                        //TODO espacer le h3 et le h2
 
 
             .bloc
@@ -71,7 +75,7 @@ html(lang="fr")
         section#section2 
             .menu 
                 h2 Discover 
-                img.couvert(src="assets/img/ic-plate.png" alt="logo couvert")
+                +couvert
                 ul 
                     li breakfast
                     li lunch
@@ -147,7 +151,7 @@ html(lang="fr")
                     .bloc_content 
                         h2 time 
                         h3 open 
-                        img.couvert(src="assets/img/ic-plate.png" alt="logo couvert")
+                        +couvert
                         h4 monday - friday 
                         p 7am - 11am
                             em
@@ -166,7 +170,7 @@ html(lang="fr")
                 .bloc 
                     h2 reservation 
                     h3 online booking 
-                    img.couvert(src="assets/img/ic-plate.png" alt="logo couvert")
+                    +couvert
                     form(action="#") 
                         div
                             select(id="people" required)
@@ -182,6 +186,35 @@ html(lang="fr")
                             input(type="text" placeholder="Email" required)
                         button(type="submit") book now
 
-        section#section4{
-            
-        }
+        section#section4
+            h2 Upcoming 
+            h3 our event
+            +couvert
+            .section
+                .card.cardLeftTop
+                    .bloc
+                        .date 
+                            h4 08
+                            h4 july 
+                    .bloc
+                        h3 night inspirescu party 
+                        ul  
+                            li restaurant resto 
+                            li 10:00pm - 6:00am
+                        a(href="#") buy tickets
+
+                .card.cardLeftBottom 
+                    .bloc
+                        .date 
+                            h4 08
+                            h4 july 
+                    .bloc
+                        h3 night inspirescu party 
+                        ul  
+                            li restaurant resto 
+                            li 10:00pm - 6:00am
+                        a(href="#") buy tickets
+
+                .card.cardRight 
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut odit autem suscipit magnam, ad fugiat libero quidem incidunt impedit ea unde voluptatum! Alias, nisi animi?
+

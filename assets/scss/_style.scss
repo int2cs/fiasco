@@ -8,38 +8,44 @@ body{
     height: 100vh;
 
     nav{
-    color: $white;
-    width: 80%;
-    margin: auto;
-    padding-top: 2em;
+        color: $white;
+        width: 80%;
+        margin: auto;
+        padding-top: 2em;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    h2{
-        font-family: allura;
-        font-size: 2.5rem;
-    }
-    ul{
         display: flex;
-        list-style-type: none;
-        
-        li{
-            font-family: roboto;
-            text-transform: uppercase;
-            padding: 0 2em;
+        align-items: center;
+        justify-content: space-between;
+
+        h2{
+            color: $white;
+        }
+
+        ul{
+            display: flex;
+            list-style-type: none;
             
-            a{
-                display: inline-block;
-                width: 100%;
+            li{
+                font-family: roboto;
+                text-transform: uppercase;
+                padding: 0 2em;
+                
+                a{
+                    display: inline-block;
+                    width: 100%;
+                    transition: 0.5s ease-in-out;
+
+                    &:hover{
+                        display: inline-block;
+                        transform: scale(1.5);
+                    }
+                }
             }
         }
+        .reseaux{
+            display: flex;
+        }
     }
-    .reseaux{
-        display: flex;
-    }
-}
 
     .vh_content{
         color: $white;
@@ -53,24 +59,11 @@ body{
         &_txt{
             transform: translateY(-50%);
 
-            h2{
-                font-family: allura;
-                font-size: 3rem;
-                line-height: 1em;
-                color: $or;
-                margin: auto;
-            }
             h1{
                 text-transform: uppercase;
                 font-size: 5rem;
                 letter-spacing: 0.1em;
                 margin: auto;
-
-            }
-            h3{
-                text-transform: uppercase;
-                letter-spacing: 0.2em;
-                font-family: roboto;
             }
         }
     }
@@ -92,14 +85,6 @@ body{
                 border: 1px dashed $or;
                 text-align: center;
 
-                h2{
-                    color: $or;
-                    font-family: allura;
-                    font-size: 2em;
-                }
-                h3{
-                    text-transform: uppercase;
-                }
                 p{
                     margin: 0;
                     font-family: roboto;
@@ -155,11 +140,6 @@ body{
             z-index: -1;
         }
     
-        h2{
-            font-family: allura;
-            font-size: 3rem;
-            color: $or;
-        }
         ul{
             color: $white;
             list-style-type: none;
@@ -212,7 +192,7 @@ body{
                 }
 
                 &_descriptif{
-                    text-align: left;
+                    text-align: left;   
                     
                     h2{
                         font-family: poppins;
@@ -233,10 +213,6 @@ body{
                     align-items: center;
                     color: $or;
                     font-family: allura;
-
-                    h2{
-                        font-size: 2rem;
-                    }
                 }
             }
         }
@@ -250,23 +226,12 @@ body{
     .reservation{
         width: 80%;
         max-width: 1700px;
-        margin: 50px auto;
+        margin: 50px auto 0 auto;
         display: grid;
         grid-template-columns: 25% 75%;
 
         .bloc{
             text-align: center;
-
-            h2{
-                font-family: allura;
-                font-size: 3rem;
-                text-transform: capitalize;
-                color: $or;
-            }
-            h3{
-                font-size: 2rem;
-                text-transform: uppercase;
-            }
         }
 
         .bloc:first-child{
@@ -335,5 +300,129 @@ body{
 }
 
 #section4{
+    padding-top: 100px;
+    text-align: center;
+    background: $darken;
     
+    h3{color:$white}
+
+    .section{
+        width: 80%;
+        max-width: 1700px;
+        margin: auto;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 55% 45%;
+        grid-template-areas: 
+        "clt cr"
+        "clb cr";
+
+        .card{
+            display: flex;
+
+            .bloc{
+                
+
+                .date{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 125px;
+                    height: 125px;
+                    color: $white;
+                    background: $darken;
+
+                    h4{
+                        font-family: roboto;
+                        margin: 0.15em 0;
+                    }
+                    h4:first-child{
+                        font-size: 2rem;
+                    }
+                    h4:last-child{
+                        letter-spacing: 0.1em;
+                    }
+                }
+
+                &:first-child{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex: 1;
+                }
+                &:last-child{
+                    flex:2;
+                    color: $black;
+                    background: $white;
+                    padding: 0;
+                }
+
+                h3{
+                    margin: 1em 0 0 0;
+                    color: $black;
+                    text-transform: capitalize;
+                    letter-spacing: 0.1em;
+                    font-size: 1.5rem;
+                }
+                ul{
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+
+                    li{
+                        margin: 0 1em;
+                        color: $grey;
+                        font-size: 0.8rem;
+                        text-transform: capitalize;
+                        letter-spacing: 0.15em;
+
+                        &:first-child::before{
+                            content: "";
+                            display: inline-block;
+                            margin: 0 10px;
+                            width: 15px;
+                            height: 15px;
+                            background: center/cover url("../assets/img/pin.svg");
+                        }
+                        &:last-child::before{
+                            content: "";
+                            display: inline-block;
+                            margin: 0 10px;
+                            width: 15px;
+                            height: 15px;
+                            background: center/cover url("../assets/img/clock-time.svg");
+                        }
+                    }
+                }
+                a{
+                    display: block;
+                    text-transform: uppercase;
+                    text-align: left;
+                    margin: 3em 2em;
+                }
+
+            }       
+        }
+        .cardLeftTop{
+            grid-area: clt;
+            height: 200px;
+            
+            .bloc:first-child{
+                background: center/cover url("../assets/img/event-01.jpg");
+            }
+            }
+
+        .cardLeftBottom{
+            grid-area: clb;
+            height: 200px;
+
+            .bloc:first-child{
+                background: center/cover url("../assets/img/event-02.jpg");
+            }
+        }
+        .cardRight{
+            grid-area: cr;
+        }
+    }
 }
