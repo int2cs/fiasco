@@ -24,6 +24,7 @@ body{
         ul{
             display: flex;
             list-style-type: none;
+            padding: 0;
             
             li{
                 font-family: roboto;
@@ -45,6 +46,13 @@ body{
         .reseaux{
             display: flex;
         }
+
+        @media screen and (max-width: 1335px){
+            ul{ li{padding: 0 1em;}}
+        }
+        @media screen and (max-width: 1050px){
+            ul{ display: none;}
+        }
     }
 
     .vh_content{
@@ -64,6 +72,26 @@ body{
                 font-size: 5rem;
                 letter-spacing: 0.1em;
                 margin: auto;
+            }
+
+            @media screen and (max-width: 730px){
+                h1{
+                    font-size: 4rem;
+                }
+                h3{
+                    font-size: 1.5rem;
+                }
+            }
+            @media screen and (max-width: 410px){
+                h1{
+                    font-size: 2rem;
+                }
+                h2{
+                    font-size: 1.5rem;
+                }
+                h3{
+                    font-size: 0.8rem;
+                }
             }
         }
     }
@@ -101,6 +129,7 @@ body{
                         color: $black;
                         font-family: poppins;
                         font-size: 1.2rem;
+                        margin-bottom: 0.3em;
                     }
                     h3{
                         color: $grey;
@@ -114,6 +143,11 @@ body{
         &:nth-child(2){
             background: center/cover url("../assets/img/store-01.jpg");
         }
+    }
+
+    @media screen and (max-width: 1230px){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 }
 
@@ -146,6 +180,7 @@ body{
             display: flex;
             justify-content: center;
             font-size: 1.5rem;
+            padding: 0;
 
             li{
             padding: 0 2em;
@@ -163,6 +198,7 @@ body{
         }
 
         &_content{
+            min-width: 1010px;
             width: 60%;
             margin: auto;
             padding: 30px 50px;
@@ -189,6 +225,7 @@ body{
                     height: $dim;
                     border-radius: 50%;
                     margin-right: 20px;
+
                 }
 
                 &_descriptif{
@@ -205,6 +242,11 @@ body{
                         text-transform: capitalize;
                         margin: 0
                     }
+
+                    @media screen and (max-width: 600px){
+                        h2{font-size: 0.7rem;}
+                        p{font-size: 0.6rem;}
+                    }
                 }
 
                 .price{
@@ -213,6 +255,48 @@ body{
                     align-items: center;
                     color: $or;
                     font-family: allura;
+
+                    @media screen and (max-width: 600px){
+                        h2{font-size: 1rem;}
+                    }
+                }
+
+                @media screen and (max-width: 600px){
+                    grid-template-columns: 2fr 1fr;
+
+                    img{
+                        display: none;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 1050px){
+                min-width: 580px;
+                section{
+                    display: block;
+                }
+            }
+            @media screen and (max-width: 600px){
+                min-width: unset;
+
+                .plate{
+                    padding: 1em;
+                }
+            }
+        }
+
+        @media screen and (max-width: 1050px){
+            ul{
+                li{
+                    padding: 0 1em;
+                }
+            }
+        }
+        @media screen and (max-width: 630px){
+            min-width: unset;
+            ul{
+                li{
+                    padding: 0 0.5em;
                 }
             }
         }
@@ -300,7 +384,7 @@ body{
 }
 
 #section4{
-    padding-top: 100px;
+    padding: 100px 0 300px 0;
     text-align: center;
     background: $darken;
     
@@ -321,8 +405,6 @@ body{
             display: flex;
 
             .bloc{
-                
-
                 .date{
                     display: flex;
                     flex-direction: column;
@@ -401,20 +483,22 @@ body{
                     text-align: left;
                     margin: 3em 2em;
                 }
-
             }       
         }
         .cardLeftTop{
             grid-area: clt;
+            min-width: 640px;
             height: 200px;
             
             .bloc:first-child{
                 background: center/cover url("../assets/img/event-01.jpg");
+                width: 200px;
+                height: 200px;
             }
             }
-
         .cardLeftBottom{
             grid-area: clb;
+            min-width: 640px;
             height: 200px;
 
             .bloc:first-child{
@@ -423,6 +507,181 @@ body{
         }
         .cardRight{
             grid-area: cr;
+            max-width: 640px;
+            background: center/cover url(../assets/img/event-03.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            
+            .bloc{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                padding-top: 130px!important;
+                flex-direction: column;
+
+                .date{
+                    position: absolute;
+                    top: 0;
+                }
+            }
         }
     }
+}
+
+#section5{
+    background: $darken;
+
+    .comment{
+        background: $white;
+        margin: auto;
+        width: 80%;
+        max-width: 1700px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 2;
+
+        .avatar{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .citation{
+            text-align: center;
+            margin: 50px auto 50px auto;
+
+            p{
+                width: 80%;
+                display: block;
+                margin: 3em auto;
+                position: relative;
+                line-height: 2em;
+
+                &::before{
+                content: "";
+                background: center/cover url("../assets/img/left-quote.svg");
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                }
+                &::after{
+                content: "";
+                background: center/cover url("../assets/img/left-quote.svg");
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                bottom: 20px;
+                right: -10px;
+                transform: rotate(180deg)
+                }
+            }
+
+            h2{ 
+                color: $black;
+                font-family: poppins;
+                font-size: 1.2rem;
+                margin-bottom: 1em;
+            }
+            h3{
+                color: $or;
+                font-family: roboto;
+                font-size: 0.8rem;
+            }
+        }
+
+    }
+}
+
+#map{
+    background: center/cover url("../assets/img/gmap.jpg");
+    height: 400px;
+    transform: translateY(-50px);
+}
+
+footer{
+    background: $darken;
+    transform: translateY(-50px);
+    
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 80%;
+        max-width: 1700px;
+        margin: auto;
+        
+        .bloc:first-child{
+            padding: 50px;
+
+            .content{
+                width: 70%;
+                margin-left: auto;
+                margin-right: 0;
+
+                p{
+                    line-height: 1.8em;
+                    font-family: roboto;
+                    color: $grey
+                }
+            }
+        }
+        .bloc:last-child{
+            padding: 50px;
+
+            h3{
+                color: $white;
+                font-size: 1rem;
+                margin: 25px auto;
+            }
+
+            .content{
+
+                .newsletter{
+                    margin-bottom: 25px;
+
+                    input{
+                        height: 1.2em;
+                        color: $white;
+                        background: $darken;
+                        border: 0.1px solid $grey;
+                    }
+                    button{
+                        visibility: hidden;
+                    }
+                }
+                .reseaux{
+                    display: flex;
+
+                    h3{flex:1}
+                
+                    ul{
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        flex: 3;
+                        padding: 0;
+
+                        li{
+                            width: 20px;
+                            height: 20px;
+                            object-fit: cover;
+
+
+                            img{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }

@@ -1,6 +1,5 @@
-//déclaration
-mixin couvert
-    img.couvert(src="assets/img/ic-plate.png" alt="logo couvert")
+//import
+include pug/mixins
 
 doctype html
 html(lang="fr")
@@ -19,16 +18,16 @@ html(lang="fr")
                         |The Fiasco
                 ul  
                     li 
-                        a(href="#")
+                        a(href="/")
                             |home
                     li 
-                        a(href="#")
+                        a(href="#section3")
                             |reservations
                     li 
                         a(href="#section2")
                             |menu
                     li 
-                        a(href="#")
+                        a(href="#section{")
                             |blog
                     li 
                         a(href="#")
@@ -37,16 +36,19 @@ html(lang="fr")
                         a(href="#")
                             |shop
                     li 
-                        a(href="#")
+                        a(href="#contact")
                             |contact
                 .reseaux 
                 ul 
+                    li
+                        a(href="#")  
+                            i.fab.fa-facebook-f
                     li 
-                        i.fab.fa-facebook-f
+                        a(href="#") 
+                            i.fab.fa-twitter
                     li 
-                        i.fab.fa-twitter
-                    li 
-                        i.fab.fa-instagram
+                        a(href="#") 
+                            i.fab.fa-instagram
 
             .vh_content
                 .vh_content_txt
@@ -67,9 +69,6 @@ html(lang="fr")
                         img(src="assets/img/avatar-01.jpg", alt="avatar chef cuisto")
                         h2 russell stephens
                         h3 chef cook 
-                        //TODO espacer le h3 et le h2
-
-
             .bloc
 
         section#section2 
@@ -216,5 +215,46 @@ html(lang="fr")
                         a(href="#") buy tickets
 
                 .card.cardRight 
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut odit autem suscipit magnam, ad fugiat libero quidem incidunt impedit ea unde voluptatum! Alias, nisi animi?
+                    .bloc
+                        .date
+                            h4 08
+                            h4 july 
+                        h3 Thousand celebrites at johnnie night 
+                        ul 
+                            li restaurant resto
+                            li 10:00pm - 6:00am
+                        a(href="#") buy tickets
 
+        section#section5    
+            .comment 
+                img.avatar(src="./assets/img/avatar-02.jpg", alt="avatar")
+                .citation
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus vero soluta, itaque sapiente cum impedit blanditiis autem nobis possimus expedita laudantium recusandae suscipit optio error aspernatur saepe voluptatem aut, quisquam nisi eius! Quod, repellat. Voluptatibus voluptatum obcaecati labore nemo in!
+                    h2 Magie Stephens
+                    h3 CEO - HeadPassion
+        #map 
+
+        footer#contact
+            .container
+                .bloc 
+                    .content
+                        h2 resto
+                        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo est possimus rem ea   voluptatibus distinctio voluptatum quasi.
+                .bloc 
+                    .content
+                        .newsletter 
+                            form   
+                                h3 newsletter 
+                                input(types="text" placeholder="Your email address")
+                                button(type="submit")
+                        .reseaux 
+                            h3 follow us :
+                            ul 
+                                li 
+                                    img(src="./assets/img/icons/facebook.svg", alt="facebook") 
+                                li
+                                    img(src="./assets/img/icons/twitter.svg", alt="twitter") 
+                                li 
+                                    img(src="./assets/img/icons/instagram.svg", alt="instagram") 
+                                li 
+                                    img(src="./assets/img/icons/pinterest.svg", alt="pinterest") 
