@@ -387,6 +387,12 @@ body {
   }
 }
 
+@media screen and (max-width: 550px) {
+  #section2 .menu ul {
+    font-size: 1.1rem;
+  }
+}
+
 #section3 {
   background: #21201E;
   padding-top: 150px;
@@ -595,7 +601,7 @@ body {
   color: #000;
   text-transform: capitalize;
   letter-spacing: 0.1em;
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 
 #section4 .section .card .bloc ul {
@@ -639,7 +645,7 @@ body {
 
 #section4 .section .cardLeftTop {
   grid-area: clt;
-  min-width: 640px;
+  min-width: 580px;
   height: 200px;
 }
 
@@ -651,7 +657,7 @@ body {
 
 #section4 .section .cardLeftBottom {
   grid-area: clb;
-  min-width: 640px;
+  min-width: 580px;
   height: 200px;
 }
 
@@ -680,6 +686,54 @@ body {
 #section4 .section .cardRight .bloc .date {
   position: absolute;
   top: 0;
+}
+
+@media screen and (max-width: 1280px) {
+  #section4 .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #section4 .section .cardRight {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  #section4 .section .card .bloc ul li {
+    font-size: 0.5rem;
+  }
+  #section4 .section .cardLeftTop {
+    min-width: unset;
+  }
+  #section4 .section .cardLeftTop .bloc:first-child {
+    display: none;
+  }
+  #section4 .section .cardLeftBottom {
+    min-width: unset;
+  }
+  #section4 .section .cardLeftBottom .bloc:first-child {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  #section4 .section .card {
+    height: auto;
+  }
+  #section4 .section .card .bloc h3 {
+    font-size: 1em;
+  }
+  #section4 .section .card .bloc a {
+    font-size: 1em;
+    margin: 1em 2em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #section4 {
+    padding: 100px 0 100px 0;
+  }
 }
 
 #section5 {
@@ -837,5 +891,21 @@ footer .container .bloc:last-child .content .reseaux ul li {
 
 footer .container .bloc:last-child .content .reseaux ul li img {
   width: 100%;
+}
+
+@media screen and (max-width: 840px) {
+  footer .container {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .container .bloc:first-child .content {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  footer .container .bloc:last-child .content .reseaux {
+    display: none;
+  }
 }
 /*# sourceMappingURL=app.css.map */

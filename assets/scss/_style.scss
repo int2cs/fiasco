@@ -300,6 +300,11 @@ body{
                 }
             }
         }
+        @media screen and (max-width: 550px){
+            ul{
+                font-size: 1.1rem;
+            }
+        }
     }
 }
 
@@ -514,7 +519,7 @@ body{
                     color: $black;
                     text-transform: capitalize;
                     letter-spacing: 0.1em;
-                    font-size: 1.5rem;
+                    font-size: 1.5em;
                 }
                 ul{
                     padding: 0;
@@ -556,7 +561,7 @@ body{
         }
         .cardLeftTop{
             grid-area: clt;
-            min-width: 640px;
+            min-width: 580px;
             height: 200px;
             
             .bloc:first-child{
@@ -567,7 +572,7 @@ body{
             }
         .cardLeftBottom{
             grid-area: clb;
-            min-width: 640px;
+            min-width: 580px;
             height: 200px;
 
             .bloc:first-child{
@@ -596,6 +601,52 @@ body{
                 }
             }
         }
+
+        @media screen and (max-width: 1280px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .cardRight{
+                margin: auto;
+            }
+        }
+        @media screen and (max-width: 680px) {
+            .card{
+                .bloc{
+                    ul{
+                        li{ font-size: 0.5rem;}
+                    }
+                }
+            }
+            .cardLeftTop{
+                min-width: unset;
+                    .bloc:first-child{ display: none;}
+                }
+                .cardLeftBottom{
+                    min-width: unset;
+                    .bloc:first-child{ display: none;}
+                }
+        }
+        @media screen and (max-width: 440px) {
+            .card{
+                height: auto;
+                .bloc{
+                    h3{
+                        font-size: 1em;
+                    }
+                    a{
+                        font-size: 1em;
+                        margin: 1em 2em
+                    }
+                }
+            }
+        }
+        
+    }
+
+    @media screen and (max-width: 600px) {
+        padding: 100px 0 100px 0;
     }
 }
 
@@ -750,6 +801,26 @@ footer{
                     }
                 }
             }
+        }
+
+        @media screen and (max-width: 840px) {
+            display: flex;
+            flex-direction: column;
+
+            .bloc:first-child{
+                .content{
+                    width: auto;
+                }
+            }
+        }
+        @media screen and (max-width: 360px){
+            .bloc:last-child{
+                .content{
+                    .reseaux{
+                        display: none;
+                    }
+                }
+            } 
         }
     }
 
