@@ -309,6 +309,7 @@ body{
 
     .reservation{
         width: 80%;
+        min-width: 965px;
         max-width: 1700px;
         margin: 50px auto 0 auto;
         display: grid;
@@ -325,6 +326,7 @@ body{
             justify-content: center;
             align-items: center;
             padding: 30px;
+
 
             .bloc_content{
                 width: 100%;
@@ -379,6 +381,73 @@ body{
                 }
             }
             
+        }
+
+        @media screen and (max-width: 985px){
+
+            min-width: unset;
+            width: 90%;
+            grid-template-columns: 35% 65%;
+
+            .bloc:last-child{
+                padding: 0 2em;
+                form{
+                    div{
+                        &:first-child{
+                            margin-bottom: 3em;
+                        }
+
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows: 1fr 1fr;
+                        grid-template-areas: 
+                        "i1 i2"
+                        "i3 i3";
+
+                        select{
+                            grid-area: i1;
+                        }
+                        input[type="date"]{
+                            grid-area: i2;
+                        }
+                        input[type="time"]{
+                            grid-area: i3;
+                        }
+                        input.name{
+                            grid-area: i1;
+                        }
+                        input.phone{
+                            grid-area: i2;
+                        }
+                        input.email{
+                            grid-area: i3;
+                        }
+                    }
+                    button{margin: 1em auto;}
+                }
+            }
+        }
+        @media screen and (max-width: 804px) {
+            grid-template-columns: 45% 55%;
+            .bloc:last-child{
+                form{
+                    div{
+                        grid-template-columns: 1fr;
+                        grid-template-areas: 
+                        "i1"
+                        "i2"
+                        "i3";
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 600px) {
+            grid-template-columns: 1fr;
+
+            .bloc:first-child{
+                img.couvert{
+                    margin: 1rem;
+                }
+            }
         }
     }
 }

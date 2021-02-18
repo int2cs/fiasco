@@ -394,6 +394,7 @@ body {
 
 #section3 .reservation {
   width: 80%;
+  min-width: 965px;
   max-width: 1700px;
   margin: 50px auto 0 auto;
   display: grid;
@@ -466,6 +467,65 @@ body {
   background: #000;
   padding: 1.5em 5em;
   border-radius: 60px;
+}
+
+@media screen and (max-width: 985px) {
+  #section3 .reservation {
+    min-width: unset;
+    width: 90%;
+    grid-template-columns: 35% 65%;
+  }
+  #section3 .reservation .bloc:last-child {
+    padding: 0 2em;
+  }
+  #section3 .reservation .bloc:last-child form div {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "i1 i2" "i3 i3";
+  }
+  #section3 .reservation .bloc:last-child form div:first-child {
+    margin-bottom: 3em;
+  }
+  #section3 .reservation .bloc:last-child form div select {
+    grid-area: i1;
+  }
+  #section3 .reservation .bloc:last-child form div input[type="date"] {
+    grid-area: i2;
+  }
+  #section3 .reservation .bloc:last-child form div input[type="time"] {
+    grid-area: i3;
+  }
+  #section3 .reservation .bloc:last-child form div input.name {
+    grid-area: i1;
+  }
+  #section3 .reservation .bloc:last-child form div input.phone {
+    grid-area: i2;
+  }
+  #section3 .reservation .bloc:last-child form div input.email {
+    grid-area: i3;
+  }
+  #section3 .reservation .bloc:last-child form button {
+    margin: 1em auto;
+  }
+}
+
+@media screen and (max-width: 804px) {
+  #section3 .reservation {
+    grid-template-columns: 45% 55%;
+  }
+  #section3 .reservation .bloc:last-child form div {
+    grid-template-columns: 1fr;
+    grid-template-areas: "i1" "i2" "i3";
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #section3 .reservation {
+    grid-template-columns: 1fr;
+  }
+  #section3 .reservation .bloc:first-child img.couvert {
+    margin: 1rem;
+  }
 }
 
 #section4 {
