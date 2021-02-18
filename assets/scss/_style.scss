@@ -283,6 +283,11 @@ body{
                     padding: 1em;
                 }
             }
+
+            @media screen and (max-width: 600px) {
+                width: 90%;
+                padding: 10px 10px;
+            }
         }
 
         @media screen and (max-width: 1050px){
@@ -302,7 +307,13 @@ body{
         }
         @media screen and (max-width: 550px){
             ul{
-                font-size: 1.1rem;
+                font-size: 1rem;
+                display: flex;
+                flex-wrap: wrap;
+                
+                li::after{
+                    content:none;
+                }
             }
         }
     }

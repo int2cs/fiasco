@@ -372,6 +372,13 @@ body {
   }
 }
 
+@media screen and (max-width: 600px) {
+  #section2 .menu_content {
+    width: 90%;
+    padding: 10px 10px;
+  }
+}
+
 @media screen and (max-width: 1050px) {
   #section2 .menu ul li {
     padding: 0 1em;
@@ -389,7 +396,12 @@ body {
 
 @media screen and (max-width: 550px) {
   #section2 .menu ul {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #section2 .menu ul li::after {
+    content: none;
   }
 }
 
